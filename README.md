@@ -1,7 +1,6 @@
 # Nova Algolia Cards
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/nicolasbeauvais/nova-algolia-card.svg?style=flat-square)](https://packagist.org/packages/nicolasbeauvais/nova-algolia-card)
-[![Quality Score](https://img.shields.io/scrutinizer/g/nicolasbeauvais/nova-algolia-card.svg?style=flat-square)](https://scrutinizer-ci.com/g/nicolasbeauvais/nova-algolia-card)
 [![Total Downloads](https://img.shields.io/packagist/dt/nicolasbeauvais/nova-algolia-card.svg?style=flat-square)](https://packagist.org/packages/nicolasbeauvais/nova-algolia-card)
 
 Get some insight on your Algolia indexing with this easy to use Nova card.
