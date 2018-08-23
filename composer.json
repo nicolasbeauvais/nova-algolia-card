@@ -1,0 +1,41 @@
+{
+    "name": "nicolasbeauvais/nova-algolia-card",
+    "description": "A Laravel Nova card for Algolia",
+    "keywords": [
+        "laravel",
+        "nova",
+        "algolia"
+    ],
+    "homepage": "https://github.com/nicolasbeauvais/nova-algolia-card",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicolas Beauvais",
+            "email": "nicolasbeauvais1@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "NicolasBeauvais\\NovaAlgoliaCard\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NicolasBeauvais\\NovaAlgoliaCard\\CardServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
