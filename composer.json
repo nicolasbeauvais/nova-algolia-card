@@ -16,8 +16,7 @@
         }
     ],
     "require": {
-        "php": ">=7.1.0",
-        "laravel/nova": "*"
+        "php": ">=7.1.0"
     },
     "require-dev": {
     },
