@@ -2,17 +2,20 @@
 
 namespace NicolasBeauvais\NovaAlgoliaCard;
 
+use AlgoliaSearch\Client as AlgoliaClientV1;
+use Algolia\AlgoliaSearch\SearchClient as AlgoliaClientV2;
+
 class Algolia
 {
     private $useClientV2 = true;
 
     public function __construct()
     {
-        if (class_exists('AlgoliaSearch\Client') {
-            $this->client = new AlgoliaSearch\Client(config('scout.algolia.id'), config('scout.algolia.secret'));
+        if (class_exists('AlgoliaSearch\Client')) {
+            $this->client = new AlgoliaClientV1(config('scout.algolia.id'), config('scout.algolia.secret'));
             $this->useClientV2 = false;
         } else {
-            $this->client = Algolia\AlgoliaSearch\SearchClient::create(config('scout.algolia.id'), config('scout.algolia.secret'));
+            $this->client = AlgoliaClientV2::create(config('scout.algolia.id'), config('scout.algolia.secret'));
         }
     }
 
@@ -44,8 +47,8 @@ class Algolia
 
         return collect($indexes['items'])->where('name', $index)->sum('entries');
     }
-            
-    private function listIndexes() 
+
+    private function listIndexes()
     {
         if ($this->useClientV2) {
             return $this->client->listIndices();
